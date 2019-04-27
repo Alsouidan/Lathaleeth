@@ -126,7 +126,7 @@ class RegisterInvestor extends Component {
     console.log(body);
     if (formValid(this.state)) {
       const user = await axios
-        .post("https://lathaleeth.herokuapp.com/api/investor/", body)
+        .post("http://localhost:5000/api/investor/", body)
         .then(result => {
           if (this.props.isEnglish) alert("Investor Registered Successfully");
           else alert("تم التسجيل بنجاح");

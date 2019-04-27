@@ -274,9 +274,10 @@ router.put(
           },
           { new: true }
         );
+        console.log(updatedForm)
         await Entity_Emp.findByIdAndUpdate(
           idl,
-          { $addToSet: { "lawyer_details.pending_forms": updatedForm.id } },
+          { $addToSet: { "lawyer_details.pending_forms": updatedForm._id } },
           { safe: true },
           function(err, doc) {
             if (err) {
@@ -299,7 +300,7 @@ router.put(
         );
         await Entity_Emp.findByIdAndUpdate(
           idl,
-          { $addToSet: { "reviewer_details.pending_forms": updatedForm.id } },
+          { $addToSet: { "reviewer_details.pending_forms": updatedForm._id } },
           { safe: true },
           function(err, doc) {
             if (err) {

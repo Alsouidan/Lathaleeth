@@ -796,7 +796,7 @@ else alert("بالرجاء التأكد من صحة البيانات");      }
     ) {
       const form = await axios
         .post(
-          "https://lathaleeth.herokuapp.com/api/entity_emp/lawyerfillform/" +
+          "http://localhost:5000/api/entity_emp/lawyerfillform/" +
             this.props.loggedUser.id,
           body
         )
@@ -809,7 +809,7 @@ else alert("بالرجاء التأكد من صحة البيانات");      }
 
           }
           await axios.put(
-            "https://lathaleeth.herokuapp.com/api/forms/generateCost/" +
+            "http://localhost:5000/api/forms/generateCost/" +
               result.data.data._id
           );
           window.location.hash = "#";
