@@ -802,7 +802,10 @@ else alert("بالرجاء التأكد من صحة البيانات");      }
         )
         .then(async result => {
           if(this.props.isEnglish){
-        alert("Form Submitted Successfully");
+            alert(
+              "Form Submitted Successfully ,Case Number: " +
+                result.data.data.caseNumber
+            );
           }
           else{
                     alert("تم بنجاح");

@@ -182,7 +182,7 @@ class FillForms extends Component {
         .post("https://lathaleeth.herokuapp.com/api/forms/", body)
         .then(async result => {
           if (this.props.isEnglish) {
-            alert("Form Submitted Successfully");
+            alert("Form Submitted Successfully ,Case Number: "+result.data.data.caseNumber);
           } else {
             alert("تم بنجاح");
           }
