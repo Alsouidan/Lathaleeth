@@ -23,7 +23,7 @@ class SignIn extends Component {
     // try{
       try{
         await	axios.post(
-            "https://lathaleeth.herokuapp.com/api/entity_emp/login",
+            "http://localhost:5000/api/entity_emp/login",
             {
               username: this.state.email,
               password: this.state.password
@@ -38,7 +38,7 @@ await  this.props.login({
       }catch(e){
         try{
        await   axios.post(
-            "https://lathaleeth.herokuapp.com/api/investor/login",
+            "http://localhost:5000/api/investor/login",
             {
               email: this.state.email,
               password: this.state.password
@@ -69,7 +69,7 @@ await  this.props.login({
     e.preventDefault();
     this.login();
     // const login = axios
-    //   .put("https://lathaleeth.herokuapp.com/api/entity_emp/login", {
+    //   .put("http://localhost:5000/api/entity_emp/login", {
     //     username: this.state.username,
     //     password: this.state.password
     //   })
@@ -77,7 +77,7 @@ await  this.props.login({
     //   })
     //   .catch(error => {
     //     const invlogin = axios.put(
-    //       "https://lathaleeth.herokuapp.com/api/investor/login",
+    //       "http://localhost:5000/api/investor/login",
     //       {
     //         email: this.state.email,
     //         password: this.state.password

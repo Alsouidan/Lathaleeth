@@ -12,7 +12,7 @@ class UpdateFormPage extends Component {
     try {
       if (this.props.loggedUser.type === "investor") {
         const forms = await axios.get(
-          "https://lathaleeth.herokuapp.com/api/forms/byInvestorID/" +
+          "http://localhost:5000/api/forms/byInvestorID/" +
             this.props.loggedUser.id
         );
         console.log(forms);

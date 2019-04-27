@@ -11,7 +11,7 @@ class lawyer_workspace extends Component {
     console.log(this.props.loggedUser);
     const lawyerinfo = await axios
       .get(
-        "https://lathaleeth.herokuapp.com/api/entity_emp/workSpace/" +
+        "http://localhost:5000/api/entity_emp/workSpace/" +
           this.props.loggedUser.id
       )
       .then(res => {
@@ -87,13 +87,13 @@ edit= async (id)=>{
     });
 
     const reserve = await axios.put(
-      "https://lathaleeth.herokuapp.com/api/forms/review/" + idl + "/" + id
+      "http://localhost:5000/api/forms/review/" + idl + "/" + id
     );
   };
   pay = async (id) => {
       const lawyerinfo = await axios
       .get(
-        "https://lathaleeth.herokuapp.com/api/entity_emp/workSpace/" +
+        "http://localhost:5000/api/entity_emp/workSpace/" +
           this.props.loggedUser.id
       )
       .then(res => {
@@ -105,7 +105,7 @@ edit= async (id)=>{
         });
       });
     const reserve = await axios.put(
-      "https://lathaleeth.herokuapp.com/api/forms/formPaid/"+ id
+      "http://localhost:5000/api/forms/formPaid/"+ id
     );
   };
   addComment = async (id, body) => {
@@ -121,12 +121,12 @@ edit= async (id)=>{
     console.log(this.state.pending_forms);
     //   useAlert("Comment Submitted")
     const add = await axios.put(
-      "https://lathaleeth.herokuapp.com/api/forms/commentOnForm/" + id,
+      "http://localhost:5000/api/forms/commentOnForm/" + id,
       body
     );
     const lawyerinfo = await axios
       .get(
-        "https://lathaleeth.herokuapp.com/api/entity_emp/workSpace/" +
+        "http://localhost:5000/api/entity_emp/workSpace/" +
           this.props.loggedUser.id
       )
       .then(res => {

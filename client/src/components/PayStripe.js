@@ -10,7 +10,7 @@ export default class Checkout extends React.Component {
   onToken = async (token) => {
     const pay = await axios
       .post(
-        "https://lathaleeth.herokuapp.com/api/forms/payStripe/" +
+        "http://localhost:5000/api/forms/payStripe/" +
           this.props.form.id,
           token
       )
